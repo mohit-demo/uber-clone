@@ -1,7 +1,6 @@
 terraform {
-  backend "s3" {
-    bucket = "ajay-mrcloudbook777" # Replace with your actual S3 bucket name
-    key    = "EKS/terraform.tfstate"
-    region = "ap-south-1"
+  backend "gcs" {
+    bucket  = "demo-v1"              # Replace with your actual GCS bucket name
+    prefix  = "EKS/terraform.tfstate"  # Path inside the bucket to store the state file
   }
 }
